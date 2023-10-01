@@ -1,17 +1,10 @@
 package lotr;
 
+import kick.Elfkick;
 
 public class Elf extends Character {
     public Elf() {
-        super(10, 10);
-    }
-
-    public void kick(Character oponent) {
-        if (oponent.getPower() < this.getPower()) {
-            oponent.setHp(0);
-        } else {
-            oponent.setPower(oponent.getPower() - 1);
-        }
+        super(10, 10, new Elfkick());
     }
 
     public String toString() {
